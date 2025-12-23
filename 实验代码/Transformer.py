@@ -358,7 +358,6 @@ if best_model_state_dict is not None:
 else:
     logger.warning("没有找到最好的模型，使用训练后的最后一个模型进行测试。")
 
-# 最终在测试集上进行评估
 logger.info("\n开始在测试集上评估:")
 test_accuracy, test_report = evaluate(model, test_loader, device, save_conf_matrix=True)
 logger.info(f"测试集准确率: {test_accuracy:.4f}")

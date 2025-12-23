@@ -44,8 +44,6 @@ tokenizer = GPT2Tokenizer.from_pretrained('./GPT2-124M', trust_remote_code=True,
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token  # 将pad_token设置为eos_token
 logger.info("\nBERT tokenizer loaded\n")
-
-# 定义Dataset类
 class NewsDataset(Dataset):
     def __init__(self, texts, labels, tokenizer, max_len):
         self.texts = texts
@@ -193,7 +191,6 @@ def train_epoch(model, data_loader, optimizer, criterion, device, epoch):
 
         total_loss += loss.item()
 
-        # 计算准确率
         _, predictions = torch.max(outputs, dim=1)
         correct = (predictions == labels).sum().item()
         total_correct += correct

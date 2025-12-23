@@ -1,0 +1,16 @@
+# PyCharm specific files
+.idea/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Environment folder (if you use one)
+.env
+venv/
+env/
+
+# Output files from your experiment (optional, but good practice)
+# You might want to keep the final report, but not intermediate data
+output_videos*/
+*.log

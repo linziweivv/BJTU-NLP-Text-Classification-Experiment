@@ -351,6 +351,8 @@ plt.tight_layout()
 plt.savefig('results/train_val_curves.png')
 plt.close()
 
+
+
 # 加载最好的模型用于测试
 if best_model_state_dict is not None:
     model.load_state_dict(best_model_state_dict)
